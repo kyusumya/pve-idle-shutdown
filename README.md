@@ -89,7 +89,7 @@ DRY_RUN=false
 ### 1️⃣ リポジトリ配置
 
 ```bash
-git clone https://github.com/kyusumya/pve-idle-shutdown-manager
+git clone https://github.com/kyusumya/pve-idle-shutdown
 cd pve-idle-shutdown-manager
 ```
 
