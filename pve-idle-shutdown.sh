@@ -91,6 +91,21 @@ journalctl --since "$since" \
 }
 
 ############################
+# startup protection
+############################
+
+MIN_UPTIME=900  # 15 minutes
+
+uptime_sec=$(cut -d. -f1 /proc/uptime)
+
+echo "[DEBUG] uptime: $uptime_sec"
+
+if [ "$uptime_sec" -lt "$MIN_UPTIME" ]; then
+echo "startup grace period"
+exit 0
+fi
+
+############################
 # brute force detection
 ############################
 
